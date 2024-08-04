@@ -17,6 +17,16 @@ public static void main(String a[]){
     char c = 'k';
     boolean b = true;
 
+
+
+    //Literals:
+    //A notation that representes a fixed value in the source code and it can be anything integer ,float , double, string, long.. etc
+
+    int count = 0;
+    //A literal ‘0’ represents the value zero.
+
+
+
 // System.out.print(result);
 }
 }
