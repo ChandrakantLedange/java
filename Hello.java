@@ -70,10 +70,20 @@ System.out.print(add);
 
 
 //conditional statement
+//if else
 if(num1 > num2) //5 > 4
 System.out.print("hello"); // ans
 else
 System.out.print("bye");
+
+int num3 = 12;
+if(num1<num2){
+System.out.print(num1);
+}else if(num2 > num3){
+    System.out.print(num2);
+}else{
+    System.out.print(num3);
+}
 
 
 }
