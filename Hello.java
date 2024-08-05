@@ -54,7 +54,18 @@ int add = numA -numB; //-1
 // boolean newResult = numA >= numB; // false
 // boolean newResult = numA <= numB; // true
 // boolean newResult = numA == numB; // false
-boolean newResult = numA != numB; // true
+// boolean newResult = numA != numB; // true
+
+
+
+//Logical operator(AND &&, OR ||, NOT !)
+// boolean newResult = numA > numB && num1 < num2; //false 
+// boolean newResult = numA > numB || num1 < num2; //false 
+
+// Not !
+// System.out.print(!newResult); //true
+
+
 
 
 
