@@ -15,7 +15,7 @@ public static void main(String a[]){
     float f=5.8f;
     double d = 5.8;
     char c = 'k';
-    boolean b = true;
+    // boolean b = true;
 
 
 
@@ -26,7 +26,13 @@ public static void main(String a[]){
     //A literal ‘0’ represents the value zero.
 
 
+//Type ccoversion and casting:
+int digit = 12;
+//byte b = digit;//Hello.java:31: error: incompatible types: possible lossy conversion from int to byte
 
-// System.out.print(result);
+byte b = (byte)digit;//12
+
+
+System.out.print(b);
 }
 }
