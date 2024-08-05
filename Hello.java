@@ -86,5 +86,21 @@ System.out.print(num1);
 }
 
 
+//Ternory operator - (? :)
+int n = 10;
+int nResult = 0;
+if(n > 5){
+    nResult = 10;
+}else{
+    nResult  = 20;
+}
+
+System.out.print(nResult);//10
+
+//The above code we can make it short by using ternory operator.
+nResult = n > 5 ? 10 : 20;
+System.out.print(nResult);//10
+
+
 }
 }
