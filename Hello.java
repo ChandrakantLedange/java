@@ -39,6 +39,8 @@ int numB =4;
 //int add = numA +numB; //7
 int add = numA -numB; //-1
 
+System.out.print(add);
+
 //numA = numA +1;//4
 //numA += 1; //4
 // numA++; //4 post - increment
@@ -67,12 +69,12 @@ int add = numA -numB; //-1
 
 
 
+//conditional statement
+if(num1 > num2) //5 > 4
+System.out.print("hello"); // ans
+else
+System.out.print("bye");
 
 
-
-System.out.print(newResult);
-
-
-System.out.print(add);
 }
 }
