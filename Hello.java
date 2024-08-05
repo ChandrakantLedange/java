@@ -134,18 +134,28 @@ System.out.println("Enter valid number");
 
 //Loops
 //while loop
-int i = 1;
-while(i<=4){
-    System.out.println("Hi"+i);
+// int i = 1;
+// while(i<=4){
+//     System.out.println("Hi"+i);
 
-    int j=1;
-    while(j<=3){
-        System.out.println("Hello"+j);
-        j++;
-    }
-    i++;
-}
-System.out.println("bye"+i);
+//     int j=1;
+//     while(j<=3){
+//         System.out.println("Hello"+j);
+//         j++;
+//     }
+//     i++;
+// }
+// System.out.println("bye"+i);
+
+
+//do while - execute once
+int i = 1;
+do{
+    System.out.println("Hi"+i);
+    i++;   
+}while(i<=4);
+
+
 
 
 }
