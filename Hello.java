@@ -46,7 +46,17 @@ int add = numA -numB; //-1
 
 // int newResult = numA++; // 3 fetch the value and then increment.
 
-int newResult = ++numA; //4 increment and then fetch the value
+// int newResult = ++numA; //4 increment and then fetch the value
+
+
+// boolean newResult = numA < numB; // true
+// boolean newResult = numA > numB; // false
+// boolean newResult = numA >= numB; // false
+// boolean newResult = numA <= numB; // true
+// boolean newResult = numA == numB; // false
+boolean newResult = numA != numB; // true
+
+
 
 
 System.out.print(newResult);
