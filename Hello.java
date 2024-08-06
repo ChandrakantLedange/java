@@ -156,7 +156,12 @@ do{
 }while(i<=4);
 
 
-
-
+//for loop
+for(int x = 1; x <=5; x++){
+    System.out.println("Day" + x);
+    for(int y=1; y<=9; y++){
+        System.out.println(" " + (y+8) + " _ " + (y+9));
+    }
+}
 }
 }
