@@ -48,36 +48,58 @@
 
 // Method overloading
 
-class Calculator{
+// class Calculator{
   
-    public int add(int n1, int n2){ //method
-        int r = n1 + n2;
-        return r;
+//     public int add(int n1, int n2){ //method
+//         int r = n1 + n2;
+//         return r;
+//     }
+//     // public double add(double n1, int n2){ //method
+//     //     int r = n1 + n2;
+//     //     return r;
+//     // }
+//     public int add(int n1, int n2, int n3){ //method
+//         int r = n1 + n2+ n3;
+//         return r;
+//     }
+// }
+
+// public class Demo{
+// public static void main(String a[]){
+//     int num1 = 4;
+//     int num2 = 5;
+//     int num3 = 6;
+
+//     Calculator calc = new Calculator();// instance, 
+//     //calc is a variable.
+
+//     int result = calc.add(num1, num2);
+//     // double result1 = calc.add(1.0, num3);
+//     int result2 = calc.add(num1, num2,num3);
+
+//     System.out.println(result);//9
+//     System.out.println(result2);//15
+// }
+// }
+
+// Array - collection of variable values
+
+public class Demo
+{
+    public static void main(String a[])
+    {
+        int nums[] = {3,7,2,4};
+        System.out.println(nums[1]); //7
+
+        // change value
+        nums[1] = 6;
+        System.out.println(nums[1]); //6
+
+        //to print all values
+        for(int i = 0; i < 4; i++){
+        System.out.println(nums[i]); // 3,6,2,4
+
+        }
+
     }
-    // public double add(double n1, int n2){ //method
-    //     int r = n1 + n2;
-    //     return r;
-    // }
-    public int add(int n1, int n2, int n3){ //method
-        int r = n1 + n2+ n3;
-        return r;
-    }
-}
-
-public class Demo{
-public static void main(String a[]){
-    int num1 = 4;
-    int num2 = 5;
-    int num3 = 6;
-
-    Calculator calc = new Calculator();// instance, 
-    //calc is a variable.
-
-    int result = calc.add(num1, num2);
-    // double result1 = calc.add(1.0, num3);
-    int result2 = calc.add(num1, num2,num3);
-
-    System.out.println(result);//9
-    System.out.println(result2);//15
-}
 }
