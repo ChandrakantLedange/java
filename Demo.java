@@ -107,16 +107,34 @@
 
 //Multi-dimensional array.
 
+// public class Demo
+// {
+//     public static void main(String a[])
+//     {
+//             int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+//             for (int i = 0; i < myNumbers.length; ++i) {
+//                 for (int j = 0; j < myNumbers[i].length; ++j) {
+//                      System.out.print(myNumbers[i][j] +" ");
+//                 }
+//                  System.out.println();
+//             }
+//     }
+// }
+
+// Jagged array also known as ragged array.
+// They are the arrays containing arrays of different length.
+
 public class Demo
 {
     public static void main(String a[])
     {
-            int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
-            for (int i = 0; i < myNumbers.length; ++i) {
-                for (int j = 0; j < myNumbers[i].length; ++j) {
-                     System.out.print(myNumbers[i][j] +" ");
-                }
-                 System.out.println();
-            }
+       int[][] jaggedArray =  new int[3][];
+       jaggedArray[0]  = new int[]{0,1,2,3};
+       jaggedArray[1]  = new int[]{4,5};
+       jaggedArray[2]  = new int[]{6,7,8};
+
+       for(int[] row: jaggedArray){
+        // System.out.println(Arrays.toString(row));
+       }
     }
 }
