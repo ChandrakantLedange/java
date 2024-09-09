@@ -124,17 +124,56 @@
 // Jagged array also known as ragged array.
 // They are the arrays containing arrays of different length.
 
+// public class Demo
+// {
+//     public static void main(String a[])
+//     {
+//        int[][] jaggedArray =  new int[3][];
+//        jaggedArray[0]  = new int[]{0,1,2,3};
+//        jaggedArray[1]  = new int[]{4,5};
+//        jaggedArray[2]  = new int[]{6,7,8};
+
+//        for(int[] row: jaggedArray){
+//         // System.out.println(Arrays.toString(row));
+//        }
+//     }
+// }
+
+//Array of objects
+class Student
+{
+    int rollno;
+    String name;
+    int marks;    
+}
+
 public class Demo
 {
     public static void main(String a[])
     {
-       int[][] jaggedArray =  new int[3][];
-       jaggedArray[0]  = new int[]{0,1,2,3};
-       jaggedArray[1]  = new int[]{4,5};
-       jaggedArray[2]  = new int[]{6,7,8};
+       Student s1 = new Student();
+        s1.rollno = 1;
+        s1.name = "Mahesh";
+        s1.marks = 88;
 
-       for(int[] row: jaggedArray){
-        // System.out.println(Arrays.toString(row));
-       }
+        Student s2 = new Student();
+        s2.rollno = 2;
+        s2.name = "Rakesh";
+        s2.marks = 58;
+
+        Student s3 = new Student();
+        s3.rollno = 3;
+        s3.name = "Natraj";
+        s3.marks = 98;
+
+        Student students[] = new Student[3];
+        students[0] = s1;
+        students[1] = s2;
+        students[2] = s3;
+
+        for(int i = 0; i<students.length; i++)
+        {
+            System.out.println(students[i].name + " : " + students[i].marks);
+        }
     }
 }
