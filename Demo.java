@@ -305,44 +305,89 @@
 
 
 //******* Static block */
-class Mobile
-{
-    String name;
-    int price;
-    static String type;
+// class Mobile
+// {
+//     String name;
+//     int price;
+//     static String type;
 
-    //constructor
-    public Mobile()
-    {
-        name = "";
-        price = 200;
-        System.out.println("in contructor");   
-    }
+//     //constructor
+//     public Mobile()
+//     {
+//         name = "";
+//         price = 200;
+//         System.out.println("in contructor");   
+//     }
 
-    //static block
-    static
-    {
-        type = "phone";
-        System.out.println("in static block");
-    }
+//     //static block
+//     static
+//     {
+//         type = "phone";
+//         System.out.println("in static block");
+//     }
 
-    public void show(){
-         System.out.println(name + " : " + price + " : " + type + " ");
-    }
+//     public void show(){
+//          System.out.println(name + " : " + price + " : " + type + " ");
+//     }
    
-}
+// }
 
-public class Demo
+// public class Demo
+// {
+//     public static void main(String a[]) throws ClassNotFoundException
+//     {
+//         // Mobile obj1 = new Mobile();
+//         // obj1.name = "redmi";
+//         // obj1.price = 10000;
+//         // Mobile.type = "smartphone";    
+
+//         // obj1.show();
+
+//         Class.forName("Mobile");
+//     }
+// }
+
+
+//Encapsulation - encasulate the data/variable into methods and accessible by methods
+
+class Human 
 {
-    public static void main(String a[]) throws ClassNotFoundException
+    private String name;
+    private int age;
+    
+    //setter
+    public void setName(String n)
     {
-        // Mobile obj1 = new Mobile();
-        // obj1.name = "redmi";
-        // obj1.price = 10000;
-        // Mobile.type = "smartphone";    
+        name = n;
+    }
+    public void setAge(int a)
+    {
+        age = a;
+    }
 
-        // obj1.show();
+    //getter
+    
+    public String getName()
+    {
+        return name;
+    }
 
-        Class.forName("Mobile");
+    public int getAge()
+    {
+        return age;
     }
 }
+
+public class Demo{
+
+
+public static void main(String a[])
+{
+    Human obj = new Human();
+    obj.setName("Ganesh");
+    obj.setAge(25);
+
+    System.out.println(obj.getName() + " " + obj.getAge());
+}
+}
+
