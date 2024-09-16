@@ -263,42 +263,86 @@
 // }
 
 // Static method -  static method can't access non static variables directly but it can be by using object reference
+// class Mobile
+// {
+//     String name;
+//     int price;
+//     static String type;
+
+//     public void show(){
+//          System.out.println(name + " : " + price + " : " + type + " ");
+//     }
+//     // public static void show1(){//*
+//     //      System.out.println(name + " : " + price + " : " + type + " ");// name and price can't be access inside static method because they are nonstatic variable but we can type variable.
+//     // }
+//     public static void show1(Mobile obj){//*
+//          System.out.println(obj.name + " : " + obj.price + " : " + type + " ");
+         
+//     }
+// }
+
+// public class Demo
+// {''
+//     public static void main(String a[])
+//     {
+//         Mobile obj1 = new Mobile();
+//         obj1.name = "redmi";
+//         obj1.price = 10000;
+//         Mobile.type = "smartphone";
+        
+//         Mobile obj2 = new Mobile();
+//         obj2.name = "samsung";
+//         obj2.price = 12000;
+//         Mobile.type = "smartphone";
+
+//         obj1.show();
+//         obj2.show();
+
+//         // Mobile.show1();// error -  non-static variable name cannot be referenced from a static context
+//         Mobile.show1(obj1);
+//     }
+// }
+
+
+//******* Static block */
 class Mobile
 {
     String name;
     int price;
     static String type;
 
+    //constructor
+    public Mobile()
+    {
+        name = "";
+        price = 200;
+        System.out.println("in contructor");   
+    }
+
+    //static block
+    static
+    {
+        type = "phone";
+        System.out.println("in static block");
+    }
+
     public void show(){
          System.out.println(name + " : " + price + " : " + type + " ");
     }
-    // public static void show1(){//*
-    //      System.out.println(name + " : " + price + " : " + type + " ");// name and price can't be access inside static method because they are nonstatic variable but we can type variable.
-    // }
-    public static void show1(Mobile obj){//*
-         System.out.println(obj.name + " : " + obj.price + " : " + type + " ");
-         
-    }
+   
 }
 
 public class Demo
 {
-    public static void main(String a[])
+    public static void main(String a[]) throws ClassNotFoundException
     {
-        Mobile obj1 = new Mobile();
-        obj1.name = "redmi";
-        obj1.price = 10000;
-        Mobile.type = "smartphone";
-        
-        Mobile obj2 = new Mobile();
-        obj2.name = "samsung";
-        obj2.price = 12000;
-        Mobile.type = "smartphone";
+        // Mobile obj1 = new Mobile();
+        // obj1.name = "redmi";
+        // obj1.price = 10000;
+        // Mobile.type = "smartphone";    
 
-        obj1.show();
-        obj2.show();
+        // obj1.show();
 
-        // Mobile.show1();// error -  non-static variable name cannot be referenced from a static context
-        Mobile.show1(obj1);
+        Class.forName("Mobile");
     }
 }
