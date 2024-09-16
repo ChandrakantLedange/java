@@ -140,56 +140,74 @@
 // }
 
 //Array of objects
-class Student
-{
-    int rollno;
-    String name;
-    int marks;    
-}
+// class Student
+// {
+//     int rollno;
+//     String name;
+//     int marks;    
+// }
 
-public class Demo
-{
-    public static void main(String a[])
-    {
-       Student s1 = new Student();
-        s1.rollno = 1;
-        s1.name = "Mahesh";
-        s1.marks = 88;
+// public class Demo
+// {
+//     public static void main(String a[])
+//     {
+//        Student s1 = new Student();
+//         s1.rollno = 1;
+//         s1.name = "Mahesh";
+//         s1.marks = 88;
 
-        Student s2 = new Student();
-        s2.rollno = 2;
-        s2.name = "Rakesh";
-        s2.marks = 58;
+//         Student s2 = new Student();
+//         s2.rollno = 2;
+//         s2.name = "Rakesh";
+//         s2.marks = 58;
 
-        Student s3 = new Student();
-        s3.rollno = 3;
-        s3.name = "Natraj";
-        s3.marks = 98;
+//         Student s3 = new Student();
+//         s3.rollno = 3;
+//         s3.name = "Natraj";
+//         s3.marks = 98;
 
-        Student students[] = new Student[3];
-        students[0] = s1;
-        students[1] = s2;
-        students[2] = s3;
+//         Student students[] = new Student[3];
+//         students[0] = s1;
+//         students[1] = s2;
+//         students[2] = s3;
 
-        // for(int i = 0; i<students.length; i++)
-        // {
-        //     System.out.println(students[i].name + " : " + students[i].marks);
-        // }
+//         // for(int i = 0; i<students.length; i++)
+//         // {
+//         //     System.out.println(students[i].name + " : " + students[i].marks);
+//         // }
 
-        //Enahanced for loop (foreach loop)
-        for(Student stud : students){
-            System.out.println(stud.name + " : " + stud.marks);
-        }
+//         //Enahanced for loop (foreach loop)
+//         for(Student stud : students){
+//             System.out.println(stud.name + " : " + stud.marks);
+//         }
 
-        //Ex-2
-        int nums[] = new int[4];
-        nums[0] = 4;
-        nums[1] = 8;
-        nums[2] = 12;
-        nums[3] = 16;
+//         //Ex-2
+//         int nums[] = new int[4];
+//         nums[0] = 4;
+//         nums[1] = 8;
+//         nums[2] = 12;
+//         nums[3] = 16;
 
-        for(int n: nums){
-            System.out.println(n);
-        }
+//         for(int n: nums){
+//             System.out.println(n);
+//         }
+//     }
+// }
+
+//String -  String is inbuilt class and it provides bunch of default methods.
+public class Demo{
+    public static void main(String a[]){
+        String name = new String("Ritik");
+        //we can define as below
+        System.out.println(name);
+        String sureName = "Sharma";
+        System.out.println(sureName);
+
+        //String Methods
+        System.out.println(sureName.charAt(0));//S
+        System.out.println(sureName.concat(" Nanded"));//Sharma Nanded
+
+
+
     }
 }
