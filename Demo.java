@@ -195,38 +195,69 @@
 // }
 
 //String -  String is inbuilt class and it provides bunch of default methods.
-public class Demo{
-    public static void main(String a[]){
-        String name = new String("Ritik");
-        //we can define as below
-        System.out.println(name);
-        String sureName = "Sharma";
-        System.out.println(sureName);
+// public class Demo{
+//     public static void main(String a[]){
+//         String name = new String("Ritik");
+//         //we can define as below
+//         System.out.println(name);
+//         String sureName = "Sharma";
+//         System.out.println(sureName);
 
-        //String Methods
-        System.out.println(sureName.charAt(0));//S
-        System.out.println(sureName.concat(" Nanded"));//Sharma Nanded
+//         //String Methods
+//         System.out.println(sureName.charAt(0));//S
+//         System.out.println(sureName.concat(" Nanded"));//Sharma Nanded
 
-        //muttable vs immutable
-        String city = "Pune";
-        city = city + "Maharashtra";
-        System.out.print(city);
+//         //muttable vs immutable
+//         String city = "Pune";
+//         city = city + "Maharashtra";
+//         System.out.print(city);
 
-        String city1 = "Pune";
-        String city2 = "Pune";
-         // Behind the scene in the JVM the stack will create a different reference address but it referes the same reference address from heap memory.
-        System.out.println(city1 == city2);// true
+//         String city1 = "Pune";
+//         String city2 = "Pune";
+//          // Behind the scene in the JVM the stack will create a different reference address but it referes the same reference address from heap memory.
+//         System.out.println(city1 == city2);// true
 
-        // ****************************
-        //String Buffer
-        StringBuffer sb = new StringBuffer("Sachin");
-        System.out.println(sb);// Sachin
-        sb.append(" Tendulkar");
-        System.out.println(sb);// Sachin Tendulkar
+//         // ****************************
+//         //String Buffer
+//         StringBuffer sb = new StringBuffer("Sachin");
+//         System.out.println(sb);// Sachin
+//         sb.append(" Tendulkar");
+//         System.out.println(sb);// Sachin Tendulkar
+//     }
+// }
 
+//static variable - static variable refers to class not object.
+
+class Mobile
+{
+    String name;
+    int price;
+    static String type;//*
+
+    public void show(){
+         System.out.println(name + " : " + price + " : " + type + " ");
+    }
+}
+
+public class Demo
+{
+    public static void main(String a[])
+    {
+        Mobile obj1 = new Mobile();
+        obj1.name = "redmi";
+        obj1.price = 10000;
+        Mobile.type = "smartphone";
         
-        
+        Mobile obj2 = new Mobile();
+        obj2.name = "samsung";
+        obj2.price = 12000;
+        Mobile.type = "smartphone";
 
+        // obj1.type = "phone";//here both types got changed becuase type is static
+        //We can use class insted of object 
+        Mobile.type = "jiophone";
 
+        obj1.show();
+        obj2.show();
     }
 }
