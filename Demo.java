@@ -207,7 +207,14 @@ public class Demo{
         System.out.println(sureName.charAt(0));//S
         System.out.println(sureName.concat(" Nanded"));//Sharma Nanded
 
+        //muttable vs immutable
+        String city = "Pune";
+        city = city + "Maharashtra";
+        System.out.print(city);
 
+        city = "Pune"; // Behind the scene in the JVM the stack will create a reference address but it referes the same reference address from heap memory.
+        
+        System.out.print(city);
 
     }
 }
