@@ -350,19 +350,62 @@
 
 //Encapsulation - encasulate the data/variable into methods and accessible by methods
 
+// class Human 
+// {
+//     private String name;
+//     private int age;
+    
+//     //setter
+//     public void setName(String n)
+//     {
+//         name = n;
+//     }
+//     public void setAge(int a)
+//     {
+//         age = a;
+//     }
+
+//     //getter
+    
+//     public String getName()
+//     {
+//         return name;
+//     }
+
+//     public int getAge()
+//     {
+//         return age;
+//     }
+// }
+
+// public class Demo{
+
+
+// public static void main(String a[])
+// {
+//     Human obj = new Human();
+//     obj.setName("Ganesh");
+//     obj.setAge(25);
+
+//     System.out.println(obj.getName() + " " + obj.getAge());
+// }
+// }
+
+//this keyword - this keyword refers to the current object
+
 class Human 
 {
     private String name;
     private int age;
     
     //setter
-    public void setName(String n)
+    public void setName(String name)
     {
-        name = n;
+        this.name = name;
     }
-    public void setAge(int a)
+    public void setAge(int age)
     {
-        age = a;
+        this.age = age;
     }
 
     //getter
@@ -384,8 +427,8 @@ public class Demo{
 public static void main(String a[])
 {
     Human obj = new Human();
-    obj.setName("Ganesh");
-    obj.setAge(25);
+    obj.setName("Monika");
+    obj.setAge(6);
 
     System.out.println(obj.getName() + " " + obj.getAge());
 }
