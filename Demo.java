@@ -212,9 +212,21 @@ public class Demo{
         city = city + "Maharashtra";
         System.out.print(city);
 
-        city = "Pune"; // Behind the scene in the JVM the stack will create a reference address but it referes the same reference address from heap memory.
+        String city1 = "Pune";
+        String city2 = "Pune";
+         // Behind the scene in the JVM the stack will create a different reference address but it referes the same reference address from heap memory.
+        System.out.println(city1 == city2);// true
+
+        // ****************************
+        //String Buffer
+        StringBuffer sb = new StringBuffer("Sachin");
+        System.out.println(sb);// Sachin
+        sb.append(" Tendulkar");
+        System.out.println(sb);// Sachin Tendulkar
+
         
-        System.out.print(city);
+        
+
 
     }
 }
