@@ -171,9 +171,25 @@ public class Demo
         students[1] = s2;
         students[2] = s3;
 
-        for(int i = 0; i<students.length; i++)
-        {
-            System.out.println(students[i].name + " : " + students[i].marks);
+        // for(int i = 0; i<students.length; i++)
+        // {
+        //     System.out.println(students[i].name + " : " + students[i].marks);
+        // }
+
+        //Enahanced for loop (foreach loop)
+        for(Student stud : students){
+            System.out.println(stud.name + " : " + stud.marks);
+        }
+
+        //Ex-2
+        int nums[] = new int[4];
+        nums[0] = 4;
+        nums[1] = 8;
+        nums[2] = 12;
+        nums[3] = 16;
+
+        for(int n: nums){
+            System.out.println(n);
         }
     }
 }
