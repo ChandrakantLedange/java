@@ -228,14 +228,56 @@
 
 //static variable - static variable refers to class not object.
 
+// class Mobile
+// {
+//     String name;
+//     int price;
+//     static String type;//*
+
+//     public void show(){
+//          System.out.println(name + " : " + price + " : " + type + " ");
+//     }
+// }
+
+// public class Demo
+// {
+//     public static void main(String a[])
+//     {
+//         Mobile obj1 = new Mobile();
+//         obj1.name = "redmi";
+//         obj1.price = 10000;
+//         Mobile.type = "smartphone";
+        
+//         Mobile obj2 = new Mobile();
+//         obj2.name = "samsung";
+//         obj2.price = 12000;
+//         Mobile.type = "smartphone";
+
+//         // obj1.type = "phone";//here both types got changed becuase type is static
+//         //We can use class insted of object 
+//         Mobile.type = "jiophone";
+
+//         obj1.show();
+//         obj2.show();
+//     }
+// }
+
+// Static method -  static method can't access non static variables directly but it can be by using object reference
 class Mobile
 {
     String name;
     int price;
-    static String type;//*
+    static String type;
 
     public void show(){
          System.out.println(name + " : " + price + " : " + type + " ");
+    }
+    // public static void show1(){//*
+    //      System.out.println(name + " : " + price + " : " + type + " ");// name and price can't be access inside static method because they are nonstatic variable but we can type variable.
+    // }
+    public static void show1(Mobile obj){//*
+         System.out.println(obj.name + " : " + obj.price + " : " + type + " ");
+         
     }
 }
 
@@ -253,11 +295,10 @@ public class Demo
         obj2.price = 12000;
         Mobile.type = "smartphone";
 
-        // obj1.type = "phone";//here both types got changed becuase type is static
-        //We can use class insted of object 
-        Mobile.type = "jiophone";
-
         obj1.show();
         obj2.show();
+
+        // Mobile.show1();// error -  non-static variable name cannot be referenced from a static context
+        Mobile.show1(obj1);
     }
 }
