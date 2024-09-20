@@ -65,3 +65,24 @@ public class Practice
     }
 }
 
+
+//Multiple inheritance 
+//java does not support multiple inheritance
+
+//ex - 1 - multilevel inheritance
+//    class A  - x()
+//     |
+//    class B  - y()
+//     |
+//    class C  - z()
+//so here class C object can get z,y,x methods
+
+//ex - 2 - multiple inheritance
+//    class A  - x(),a()     class B  - y(),a()
+//     |                   |
+  
+//                  |
+//              class C  - x() - ok, y - ok , a() ?ambiguity(confuse)
+//so here class C object can get x() and y() but when try to access a() method will get confuse ?
+//that's the rease java does not support multiple inheritance
+
