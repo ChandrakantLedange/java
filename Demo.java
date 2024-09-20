@@ -438,16 +438,81 @@
 
 //constructor - constructor is a special method, it has same name as class name.
 
+// class Human 
+// {
+//     private String name;
+//     private int age;
+
+//     public Human(){
+//         // System.out.println("in constructor");
+//         name = "jitendra";
+//         age = 30;
+//     }
+    
+//     //setter
+//     public void setName(String name)
+//     {
+//         this.name = name;
+//     }
+//     public void setAge(int age)
+//     {
+//         this.age = age;
+//     }
+
+//     //getter
+    
+//     public String getName()
+//     {
+//         return name;
+//     }
+
+//     public int getAge()
+//     {
+//         return age;
+//     }
+// }
+
+// public class Demo{
+
+
+// public static void main(String a[])
+// {
+//     Human obj = new Human();
+//     Human obj1 = new Human();
+//     // Note - Everytime when objct creates constructor will called
+//     //here two will times constructor called.
+//     System.out.println(obj.getName() + " " + obj.getAge());
+
+//     // obj.setName("Monika");
+//     // obj.setAge(6);
+
+//     // System.out.println(obj.getName() + " " + obj.getAge());
+// }
+// }
+
+//Default constructor vs parameterized constructor - 
+
 class Human 
 {
     private String name;
     private int age;
 
+    // Default constructor
     public Human(){
         // System.out.println("in constructor");
         name = "jitendra";
         age = 30;
     }
+
+    //Note - class befault creates a default constructor if we don't create it.
+
+    //parameterized constructor
+    public Human(int a, String n){
+        // System.out.println("in constructor");
+        name = n;
+        age = a;
+    }
+    
     
     //setter
     public void setName(String name)
@@ -478,10 +543,11 @@ public class Demo{
 public static void main(String a[])
 {
     Human obj = new Human();
-    Human obj1 = new Human();
+    Human obj1 = new Human(10, "Jivak");
     // Note - Everytime when objct creates constructor will called
     //here two will times constructor called.
     System.out.println(obj.getName() + " " + obj.getAge());
+    System.out.println(obj1.getName() + " " + obj1.getAge());
 
     // obj.setName("Monika");
     // obj.setAge(6);
@@ -489,4 +555,5 @@ public static void main(String a[])
     // System.out.println(obj.getName() + " " + obj.getAge());
 }
 }
+
 
