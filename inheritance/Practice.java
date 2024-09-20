@@ -15,3 +15,11 @@ public class Practice
         System.out.println(r4);
     }
 }
+
+//Need of inheritance:
+//let's say the simple calc is already built.
+//client came to you and said hey i want to add some feature to calc like SIN , COS
+// so there is a way you can add new methods to Calc class or you can create a another class AdvCalc copy all basic feature from Calc class and add into it then create new methods for new feature.
+
+//If you notice there is code redundancy.
+//so you can create anothere class called AdvCal and extends the Calc methods into AdvCal class which is called inheritance.
