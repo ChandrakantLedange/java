@@ -393,10 +393,61 @@
 
 //this keyword - this keyword refers to the current object
 
+// class Human 
+// {
+//     private String name;
+//     private int age;
+    
+//     //setter
+//     public void setName(String name)
+//     {
+//         this.name = name;
+//     }
+//     public void setAge(int age)
+//     {
+//         this.age = age;
+//     }
+
+//     //getter
+    
+//     public String getName()
+//     {
+//         return name;
+//     }
+
+//     public int getAge()
+//     {
+//         return age;
+//     }
+// }
+
+// public class Demo{
+
+
+// public static void main(String a[])
+// {
+//     Human obj = new Human();
+//     obj.setName("Monika");
+//     obj.setAge(6);
+
+//     System.out.println(obj.getName() + " " + obj.getAge());
+// }
+// }
+
+
+
+//constructor - constructor is a special method, it has same name as class name.
+
 class Human 
 {
     private String name;
     private int age;
+
+    public Human(){
+        // System.out.println("in constructor");
+        name = "jitendra";
+        age = 30;
+    }
     
     //setter
     public void setName(String name)
@@ -427,10 +478,15 @@ public class Demo{
 public static void main(String a[])
 {
     Human obj = new Human();
-    obj.setName("Monika");
-    obj.setAge(6);
-
+    Human obj1 = new Human();
+    // Note - Everytime when objct creates constructor will called
+    //here two will times constructor called.
     System.out.println(obj.getName() + " " + obj.getAge());
+
+    // obj.setName("Monika");
+    // obj.setAge(6);
+
+    // System.out.println(obj.getName() + " " + obj.getAge());
 }
 }
 
