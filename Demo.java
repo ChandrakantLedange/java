@@ -557,3 +557,9 @@ public static void main(String a[])
 }
 
 
+// ***** Naming convention
+//Camel casing 
+//class and interface- Calculator , Runable, MyData
+//variable and method - marks,age , show(), ShowMyMarks
+//constants - PIE , BRAND,DATA
+
