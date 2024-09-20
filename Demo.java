@@ -492,69 +492,69 @@
 
 //Default constructor vs parameterized constructor - 
 
-class Human 
-{
-    private String name;
-    private int age;
+// class Human 
+// {
+//     private String name;
+//     private int age;
 
-    // Default constructor
-    public Human(){
-        // System.out.println("in constructor");
-        name = "jitendra";
-        age = 30;
-    }
+//     // Default constructor
+//     public Human(){
+//         // System.out.println("in constructor");
+//         name = "jitendra";
+//         age = 30;
+//     }
 
-    //Note - class befault creates a default constructor if we don't create it.
+//     //Note - class befault creates a default constructor if we don't create it.
 
-    //parameterized constructor
-    public Human(int a, String n){
-        // System.out.println("in constructor");
-        name = n;
-        age = a;
-    }
+//     //parameterized constructor
+//     public Human(int a, String n){
+//         // System.out.println("in constructor");
+//         name = n;
+//         age = a;
+//     }
     
     
-    //setter
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-    public void setAge(int age)
-    {
-        this.age = age;
-    }
+//     //setter
+//     public void setName(String name)
+//     {
+//         this.name = name;
+//     }
+//     public void setAge(int age)
+//     {
+//         this.age = age;
+//     }
 
-    //getter
+//     //getter
     
-    public String getName()
-    {
-        return name;
-    }
+//     public String getName()
+//     {
+//         return name;
+//     }
 
-    public int getAge()
-    {
-        return age;
-    }
-}
+//     public int getAge()
+//     {
+//         return age;
+//     }
+// }
 
-public class Demo{
+// public class Demo{
 
 
-public static void main(String a[])
-{
-    Human obj = new Human();
-    Human obj1 = new Human(10, "Jivak");
-    // Note - Everytime when objct creates constructor will called
-    //here two will times constructor called.
-    System.out.println(obj.getName() + " " + obj.getAge());
-    System.out.println(obj1.getName() + " " + obj1.getAge());
+// public static void main(String a[])
+// {
+//     Human obj = new Human();
+//     Human obj1 = new Human(10, "Jivak");
+//     // Note - Everytime when objct creates constructor will called
+//     //here two will times constructor called.
+//     System.out.println(obj.getName() + " " + obj.getAge());
+//     System.out.println(obj1.getName() + " " + obj1.getAge());
 
-    // obj.setName("Monika");
-    // obj.setAge(6);
+//     // obj.setName("Monika");
+//     // obj.setAge(6);
 
-    // System.out.println(obj.getName() + " " + obj.getAge());
-}
-}
+//     // System.out.println(obj.getName() + " " + obj.getAge());
+// }
+// }
 
 
 // ***** Naming convention
@@ -562,4 +562,32 @@ public static void main(String a[])
 //class and interface- Calculator , Runable, MyData
 //variable and method - marks,age , show(), ShowMyMarks
 //constants - PIE , BRAND,DATA
+
+
+//********* Anonymous Object */
+class A{
+    //constructor
+    public A(){
+        System.out.println("object/constructor created");
+    }
+    //method
+    public void show(){
+        System.out.println("in A show");
+    }
+}
+
+public class Demo{
+    public static void main(String a[]){
+        // int marks;
+        // marks = 99;
+
+        // A obj;//reference creation.
+        // obj = new A();
+
+        new A();
+        //Note - anonymous object can't use more than once. if we do that it will create another refrence object.
+        new A().show();
+        
+    }
+}
 
