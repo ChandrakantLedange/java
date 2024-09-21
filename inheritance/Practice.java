@@ -45,25 +45,25 @@
 // }
 
 //Multilevel inheritance:
-public class Practice
-{
-    public static void main(String a[]){
-        VeryAdvCalc obj = new VeryAdvCalc();
-        //create object of sub class
+// public class Practice
+// {
+//     public static void main(String a[]){
+//         VeryAdvCalc obj = new VeryAdvCalc();
+//         //create object of sub class
 
-        int r1 = obj.add(4,5);
-        int r2 = obj.sub(6,5);
-        int r3 = obj.mul(2,5);
-        int r4 = obj.div(10,5);
-        double r5 = obj.power(4,2);
+//         int r1 = obj.add(4,5);
+//         int r2 = obj.sub(6,5);
+//         int r3 = obj.mul(2,5);
+//         int r4 = obj.div(10,5);
+//         double r5 = obj.power(4,2);
 
-        System.out.println(r1);
-        System.out.println(r2);
-        System.out.println(r3);
-        System.out.println(r4);
-        System.out.println(r5);
-    }
-}
+//         System.out.println(r1);
+//         System.out.println(r2);
+//         System.out.println(r3);
+//         System.out.println(r4);
+//         System.out.println(r5);
+//     }
+// }
 
 
 //Multiple inheritance 
@@ -85,4 +85,46 @@ public class Practice
 //              class C  - x() - ok, y - ok , a() ?ambiguity(confuse)
 //so here class C object can get x() and y() but when try to access a() method will get confuse ?
 //that's the rease java does not support multiple inheritance
+
+
+// this and super method inside constructor -
+//Note - every class in java extends the Object class. like class A extends Object{}
+class A{
+    //default constructor
+    public A(){
+        super();
+        System.out.println("In A");
+    }
+    //parameterized constructor
+    public A(int n){
+        super();
+        System.out.println("In A int");
+    }
+}
+
+class B extends A{
+    public B(){
+        //by default every constructor super() method is there even if you do not mention.
+        super();
+        System.out.println("In B");
+    }
+    //parameterized constructor
+    public B(int n){
+        // super();// means call the constructor of super class i.e default one ->"In A".
+        
+        // if you want to call parameterized constructor pass parameter into super method.. as below
+        // super(n);// output - In A int, In B int.
+
+        //this method will execute the constructor of same class i.e -> In B
+        this();// output - In A, In B, In B int
+        System.out.println("In B int");
+    }
+}
+
+public class Practice{
+    public static void main(String a[]){
+        // B obj = new B(); // default contructors called - In A, In B
+        B obj = new B(5); // default contructors called - In A, In B int
+    }
+}
 
