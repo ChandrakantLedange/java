@@ -89,42 +89,66 @@
 
 // this and super method inside constructor -
 //Note - every class in java extends the Object class. like class A extends Object{}
-class A{
-    //default constructor
-    public A(){
-        super();
-        System.out.println("In A");
-    }
-    //parameterized constructor
-    public A(int n){
-        super();
-        System.out.println("In A int");
+// class A{
+//     //default constructor
+//     public A(){
+//         super();
+//         System.out.println("In A");
+//     }
+//     //parameterized constructor
+//     public A(int n){
+//         super();
+//         System.out.println("In A int");
+//     }
+// }
+
+// class B extends A{
+//     public B(){
+//         //by default every constructor super() method is there even if you do not mention.
+//         super();
+//         System.out.println("In B");
+//     }
+//     //parameterized constructor
+//     public B(int n){
+//         // super();// means call the constructor of super class i.e default one ->"In A".
+        
+//         // if you want to call parameterized constructor pass parameter into super method.. as below
+//         // super(n);// output - In A int, In B int.
+
+//         //this method will execute the constructor of same class i.e -> In B
+//         this();// output - In A, In B, In B int
+//         System.out.println("In B int");
+//     }
+// }
+
+// public class Practice{
+//     public static void main(String a[]){
+//         // B obj = new B(); // default contructors called - In A, In B
+//         B obj = new B(5); // default contructors called - In A, In B int
+//     }
+// }
+
+
+//************* Method overriding */
+class Calculator{
+    public int add(int n1, int n2){
+        return n1 + n2;
     }
 }
 
-class B extends A{
-    public B(){
-        //by default every constructor super() method is there even if you do not mention.
-        super();
-        System.out.println("In B");
-    }
-    //parameterized constructor
-    public B(int n){
-        // super();// means call the constructor of super class i.e default one ->"In A".
-        
-        // if you want to call parameterized constructor pass parameter into super method.. as below
-        // super(n);// output - In A int, In B int.
-
-        //this method will execute the constructor of same class i.e -> In B
-        this();// output - In A, In B, In B int
-        System.out.println("In B int");
+class AdvCaculator extends Calc{
+    //same name method as parent class.
+    public int add(int n1,int n2){
+        return n1 + n2 + 1;
     }
 }
 
 public class Practice{
     public static void main(String a[]){
-        // B obj = new B(); // default contructors called - In A, In B
-        B obj = new B(5); // default contructors called - In A, In B int
+        AdvCaculator obj = new AdvCaculator();
+        int r1 = obj.add(3,5);
+        System.out.println(r1);
     }
 }
+
 
