@@ -16,7 +16,7 @@
 //     }
 // }
 
-//Need of inheritance:
+//************* Need of inheritance:
 //let's say the simple calc is already built.
 //client came to you and said hey i want to add some feature to calc like SIN , COS, Square, Cube
 // so there is a way you can add new methods to Calc class or you can create a another class AdvCalc copy all basic feature from Calc class and add into it then create new methods for new feature.
@@ -44,7 +44,7 @@
 //     }
 // }
 
-//Multilevel inheritance:
+// ************* Multilevel inheritance:
 // public class Practice
 // {
 //     public static void main(String a[]){
@@ -66,7 +66,7 @@
 // }
 
 
-//Multiple inheritance 
+// ************* Multiple inheritance 
 //java does not support multiple inheritance
 
 //ex - 1 - multilevel inheritance
@@ -87,7 +87,7 @@
 //that's the rease java does not support multiple inheritance
 
 
-// this and super method inside constructor -
+//************* this and super method inside constructor -
 //Note - every class in java extends the Object class. like class A extends Object{}
 // class A{
 //     //default constructor
@@ -130,24 +130,45 @@
 
 
 //************* Method overriding */
-class Calculator{
-    public int add(int n1, int n2){
-        return n1 + n2;
-    }
-}
+// class Calculator{
+//     public int add(int n1, int n2){
+//         return n1 + n2;
+//     }
+// }
 
-class AdvCaculator extends Calc{
-    //same name method as parent class.
-    public int add(int n1,int n2){
-        return n1 + n2 + 1;
-    }
-}
+// class AdvCaculator extends Calc{
+//     //same name method as parent class.
+//     public int add(int n1,int n2){
+//         return n1 + n2 + 1;
+//     }
+// }
+
+// public class Practice{
+//     public static void main(String a[]){
+//         AdvCaculator obj = new AdvCaculator();
+//         int r1 = obj.add(3,5);
+//         System.out.println(r1);
+//     }
+// }
+
+//********** packages */
+//in java we can create folder structure and import 
+//like import tools.Calc
+//need to understand more.
+
+// import tools.AdvCalc;
+import tools.*; // can access all files inside tools
+//let's say tools has one more folder called basicTools - you can import as below
+//import tools.basicTools.fileName;
 
 public class Practice{
     public static void main(String a[]){
-        AdvCaculator obj = new AdvCaculator();
-        int r1 = obj.add(3,5);
-        System.out.println(r1);
+        AdvCalc obj = new AdvCalc();
+        int result = obj.mul(10,10);
+        Calc obj1 = new Calc();
+        int result1 = obj1.add(10,5);
+        System.err.println(result);//100
+        System.err.println(result1);//15
     }
 }
 
