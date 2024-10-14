@@ -161,15 +161,22 @@ import tools.*; // can access all files inside tools
 //let's say tools has one more folder called basicTools - you can import as below
 //import tools.basicTools.fileName;
 
-public class Practice{
-    public static void main(String a[]){
-        AdvCalc obj = new AdvCalc();
-        int result = obj.mul(10,10);
-        Calc obj1 = new Calc();
-        int result1 = obj1.add(10,5);
-        System.err.println(result);//100
-        System.err.println(result1);//15
-    }
-}
+// public class Practice{
+//     public static void main(String a[]){
+//         AdvCalc obj = new AdvCalc();
+//         int result = obj.mul(10,10);
+//         Calc obj1 = new Calc();
+//         int result1 = obj1.add(10,5);
+//         System.err.println(result);//100
+//         System.err.println(result1);//15
+//     }
+// }
 
 
+//******************* Access modifiers */
+//                                  public      private     default     protected
+//same class -                      yes         yes         yes         yes
+//same package, sub class -         yes         no          yes         yes
+//same package, non-subclass -      yes         no          yes         yes
+//different package, subclass -     yes         no          no          yes
+//differernt package , non-subclass-yes         no          no          no
