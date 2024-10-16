@@ -306,3 +306,9 @@ public class Practice{
 }
 
 // need to understand more Downcasting and Upcasting.
+
+//**************** Wrapper classes */
+//int  -Integer
+//char -Character
+//double -Double
+// need to understand more about wrapper classes, boxing, autoboxing
