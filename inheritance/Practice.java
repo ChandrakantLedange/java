@@ -180,3 +180,15 @@ import tools.*; // can access all files inside tools
 //same package, non-subclass -      yes         no          yes         yes
 //different package, subclass -     yes         no          no          yes
 //differernt package , non-subclass-yes         no          no          no
+
+
+// Polymorphism - poly means many and morphism means behaviour
+//there are two types of polymorphism 
+//1.compiletime - 
+//Ex - overloading add(int a, int b), add(int a, int b, int c);
+//2. runtime
+//Ex - overriding 
+//class A have add(int x,int y)
+//calss B extends A and have add(int x, int y) 
+//it will decide which method will execute at run time.
+ 
