@@ -277,18 +277,32 @@ import tools.*; // can access all files inside tools
 //there a super class for every class even if we don't extends but java will provide that.
 // and that object have it's own methods/
 //Ex
-class A{
-    String model;
-    int price;
+// class A{
+//     String model;
+//     int price;
 
-}
-class Practice{
+// }
+// class Practice{
+//     public static void main(String a[]){
+//         A obj = new A();
+//         obj.model = "New Modal";
+//         System.out.println(obj);//A@7a81197d 
+//         System.out.println(obj.toString());//A@7a81197d 
+//         //Reason for above output is obj have many default methods like toString(),equals() 
+//         //and toString() method converts into heshcode
+//         //if you create method with same name defaul will override(current method output will come).
+//     }
+// }
+
+//************* Typecasting, Downcasting, Upcasting */
+public class Practice{
     public static void main(String a[]){
-        A obj = new A();
-        obj.model = "New Modal";
-        System.out.println(obj);//A@7a81197d 
-        //Reason for above output is obj have many default methods like toString(),equals() 
-        //and toString() method converts into heshcode
-        //if you create method with same name defaul will override(current method output will come).
+        double d = 4.5;
+        // int i = d;// error -> Type mismatch: cannot convert from double to int
+        System.out.println(d);//4.5
+        int i = (int) d;
+        System.out.println(i);//4 // here loose .5 because of typecasting
     }
 }
+
+// need to understand more Downcasting and Upcasting.
