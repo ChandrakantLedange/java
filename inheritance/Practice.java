@@ -221,6 +221,7 @@ import tools.*; // can access all files inside tools
 // }
 
 //**************** final keyword */
+
 //final keyword simply means const, once you define varible , yoou can't change.
 //can use with variable, method, class
 
@@ -240,11 +241,11 @@ import tools.*; // can access all files inside tools
 
 //method with final keyword 
 //when you don't want to override a method after inherite.
-class A{
-    public final void show(){
-        System.out.println("In A Show");
-    }
-}
+// class A{
+//     public final void show(){
+//         System.out.println("In A Show");
+//     }
+// }
 
 // class B extends A{
 //     public void show(){// error-> Cannot override the final method from A
@@ -252,21 +253,42 @@ class A{
 //     }
 // }
 
-public class Practice{
+// public class Practice{
 
+//     public static void main(String a[]){
+//         //variable final
+//         final int num = 8;
+//         // num = 9; // cannot assign a value to final variable num
+//         System.out.println(num);//8
+
+//         A obj = new A();
+//         obj.show();//In A Show
+
+//         B obj1 = new B(); 
+//         obj1.show();
+
+
+//     }
+
+// }
+
+//****************** Object class equals to string hashcode */
+//Do you remember when we were discussing inheritance.
+//there a super class for every class even if we don't extends but java will provide that.
+// and that object have it's own methods/
+//Ex
+class A{
+    String model;
+    int price;
+
+}
+class Practice{
     public static void main(String a[]){
-        //variable final
-        final int num = 8;
-        // num = 9; // cannot assign a value to final variable num
-        System.out.println(num);//8
-
         A obj = new A();
-        obj.show();//In A Show
-
-        B obj1 = new B();
-        obj1.show();
-
-
+        obj.model = "New Modal";
+        System.out.println(obj);//A@7a81197d 
+        //Reason for above output is obj have many default methods like toString(),equals() 
+        //and toString() method converts into heshcode
+        //if you create method with same name defaul will override(current method output will come).
     }
-
 }
