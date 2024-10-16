@@ -194,28 +194,79 @@ import tools.*; // can access all files inside tools
 
 
 //Dynamic method dispatch
+// class A{
+//     public static void show(){
+//         System.out.println("In A Show");
+//     }
+// }
+
+// class B extends A{
+//     public static void show(){
+//         System.out.println("In B Show");
+//     }
+// }
+
+// public class Practice{
+//     public static void main(String a[]){
+//         B obj = new B();
+//         obj.show(); // In A Show
+
+//         A obj1 = new B();
+//         obj1.show(); // In A Show //reference of A but object is B because A is parent and b is child.
+
+//         //if B also have same method Show then above result will be 
+//         // In B Show
+//         // In A Show
+//     }
+// }
+
+//**************** final keyword */
+//final keyword simply means const, once you define varible , yoou can't change.
+//can use with variable, method, class
+
+//class wiht final keyword
+//if you don't want to allow access class use final keyword
+
+// final class A{
+//     public void show(){
+//         System.out.println("In A Show");
+//     }
+// }
+
+//hence error when you inherite class A -> The type B cannot subclass the final class A
+// class B extends A{
+    
+// }
+
+//method with final keyword 
+//when you don't want to override a method after inherite.
 class A{
-    public static void show(){
+    public final void show(){
         System.out.println("In A Show");
     }
 }
 
-class B extends A{
-    public static void show(){
-        System.out.println("In B Show");
-    }
-}
+// class B extends A{
+//     public void show(){// error-> Cannot override the final method from A
+//         System.out.println("In B Show");
+//     }
+// }
 
 public class Practice{
+
     public static void main(String a[]){
-        B obj = new B();
-        obj.show(); // In A Show
+        //variable final
+        final int num = 8;
+        // num = 9; // cannot assign a value to final variable num
+        System.out.println(num);//8
 
-        A obj1 = new B();
-        obj1.show(); // In A Show //reference of A but object is B because A is parent and b is child.
+        A obj = new A();
+        obj.show();//In A Show
 
-        //if B also have same method Show then above result will be 
-        // In B Show
-        // In A Show
+        B obj1 = new B();
+        obj1.show();
+
+
     }
+
 }
