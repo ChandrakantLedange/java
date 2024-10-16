@@ -191,4 +191,31 @@ import tools.*; // can access all files inside tools
 //class A have add(int x,int y)
 //calss B extends A and have add(int x, int y) 
 //it will decide which method will execute at run time.
- 
+
+
+//Dynamic method dispatch
+class A{
+    public static void show(){
+        System.out.println("In A Show");
+    }
+}
+
+class B extends A{
+    public static void show(){
+        System.out.println("In B Show");
+    }
+}
+
+public class Practice{
+    public static void main(String a[]){
+        B obj = new B();
+        obj.show(); // In A Show
+
+        A obj1 = new B();
+        obj1.show(); // In A Show //reference of A but object is B because A is parent and b is child.
+
+        //if B also have same method Show then above result will be 
+        // In B Show
+        // In A Show
+    }
+}
